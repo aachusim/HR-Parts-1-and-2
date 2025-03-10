@@ -13,12 +13,16 @@ import java.util.Collections;
 
 class PersonOrderedSet extends PersonSet
 {
+    // An override on a void method in PersonSet.
     @Override
     public void add(Person p)
     {
+        // Calls and runs the add method in PersonSet.
         super.add(p);
+        // Sorts the names of the Person object alphabetically.
         sort(p);
     }
 
+    // A private void method that sorts a given Person object alphabetically.
     private void sort(Person p){Collections.sort(people);}
 }

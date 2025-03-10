@@ -11,17 +11,23 @@ Sources:
 
 class PersonImperialSet extends PersonSet
 {
+    // An override on a void method in PersonSet.
     @Override
     public void add(Person p)
     {
+        // A double variable that contains the imperial value of a Person object's height.
         double imperialHeight = convertHeight(p.getHeight());
+        // A double variable that contains the imperial value of a Person object's weight.
         double imperialWeight = convertWeight(p.getWeight());
 
+        // A Person object that contains the name and respective height and weight in imperial units.
         Person imperialPerson = new Person(p.getName(), imperialHeight, imperialWeight);
+        // Calls and runs the add method in PersonSet.
         super.add(imperialPerson);
     }
 
+    // A private doouble method that converts centimeter to inches.
     private double convertHeight(double height){return height / 2.54;}
-
+    // A private double method that converts kilograms to pounds.
     private double convertWeight(double weight){return weight / 2.20462;}
 }

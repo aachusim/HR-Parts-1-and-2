@@ -1,24 +1,15 @@
 /*
 Andrew Achusim
-<<<<<<< HEAD
 03/10/25
 Purpose: Create a program that reads and organize information that is stored in hr.txt. For Main.java,
 the program will run all the different classes here and print out the sorted hr.txt file and created files based on that sorted information.
-=======
-02/24/25
-Purpose: Create a program that reads and organize information that is stored in hr.txt. For Person.java,
-a person's name, height, and weight will be stroed and returns the data in a database-ready String format.
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 Sources:
 	Source 1: I learned how to use Scanner to read file @ https://www.w3schools.com/java/java_files_read.asp.
 	Source 2: I learned how to trim the space in the text file @ https://www.w3schools.com/java/ref_string_trim.asp.
 	Source 3: I learend how to covert string numbers into doubles @ https://www.geeksforgeeks.org/double-parsedouble-method-in-java-with-examples/.
 	Source 4: I learned about FileNotFoundException @ https://www.geeksforgeeks.org/java-io-filenotfoundexception-in-java/.
 	Source 5: I learend about Class Patterns to get the split method to work for "hr.txt" @ https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html.
-<<<<<<< HEAD
 	Source 6: I learend how to use FileWriter @ https://www.geeksforgeeks.org/filewriter-class-in-java/.
-=======
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 This code is provided to give you a
 starting place. It should be modified.
 No further imports are needed.
@@ -60,7 +51,6 @@ public class Main
 	public static void main(String[] args) 
 	{
 		// A Person test object with made up data.
-<<<<<<< HEAD
 		//Person person = new Person("Mario", 10.0, 10.0);
 		// A line that proves the tests worked.
 		//System.out.println("Test Entry: " + person);
@@ -71,13 +61,6 @@ public class Main
 		PersonOrderedSet orderedSet = new PersonOrderedSet();
 		// A PersonImerialSet object
 		PersonImperialSet imperialSet = new PersonImperialSet();
-=======
-		Person person = new Person("Mario", 10.0, 10.0);
-		// A line that proves the tests worked.
-		System.out.println("Test Entry: " + person);
-		// A PersonSet test object
-		PersonSet personSet = new PersonSet();
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 		
 		// Don't overcomplicate the data
 		// reading. After skipping the
@@ -122,15 +105,11 @@ public class Main
 					// A new Person object that puts all the values of the previous variabes into the Person constructor.
 					Person entry = new Person(name, height, weight);
 					// A PersonSet object calling the add method to add the entry object into itself.
-<<<<<<< HEAD
 					//personSet.add(entry);
 					// A PersonOrderedSet object calling the add method to add the entry into itself.
 					orderedSet.add(entry);
 					// A PersonImperiaalSet object calling the add method to add the entry into itself.
 					imperialSet.add(entry);
-=======
-					personSet.add(entry);
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 
 					// Testing to see if each new entry was added to personSet.
 					//System.out.println("Added: " + entry);
@@ -138,24 +117,24 @@ public class Main
 			}
 			// Closes the open scanner object.
 			fileReader.close();
-<<<<<<< HEAD
 			
+			// A new FileWriter object that creates an empty text file.
 			FileWriter orderedWriter = new FileWriter("hr_ordered.txt");
+			// A FileWriter object writing in a header line.
 			orderedWriter.write("Name\tHeight (cm)\tWeight (kg)\n");
+			// A FileWriter object writing in data from a PersonOrderedSet object.
 			orderedWriter.write(orderedSet.toString());
+			// Closes the open FileWriter object.
 			orderedWriter.close();
 
+			// A new FileWriter object that creates an empty text file.
 			FileWriter imperialWriter = new FileWriter("hr_imperial.txt");
+			// A FileWriter object writing in a header line.
 			imperialWriter.write("Name\tHeight (in)\tWeight (lbs)\n");
+			// A FileWriter object writing in data from a PersonImperialSet object.
 			imperialWriter.write(imperialSet.toString());
+			// Closes the open FileWriter object.
 			imperialWriter.close();
-=======
-			/*
-			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
-			fileWriterOrder.write("testing");
-			fileWriterOrder.close();
-			*/
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 		}
 		// What is executed when an exception is found.
 		catch(Exception e)
@@ -165,7 +144,6 @@ public class Main
 			System.exit(1);
 		}
 
-<<<<<<< HEAD
 		// Prints out all the data in the PersonOrderedSet object.
 		System.out.println("Ordered Data Set");
 		System.out.println(orderedSet.toString());
@@ -175,9 +153,3 @@ public class Main
 
 	}
 }
-=======
-		// Prints out all the data in the PersonSet object.
-		System.out.println(personSet.toString());
-	}
-}
->>>>>>> 30da546ff4880359e847e568d1402580677b3d38
