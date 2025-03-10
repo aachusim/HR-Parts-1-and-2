@@ -1,8 +1,8 @@
 /*
 Andrew Achusim
-02/24/25
-Purpose: Create a program that reads and organize information that is stored in hr.txt. For Person.java,
-a person's name, height, and weight will be stroed and returns the data in a database-ready String format.
+03/10/25
+Purpose: Create a program that reads and organize information that is stored in hr.txt. For Main.java,
+the program will run all the different classes here and print out the sorted hr.txt file and created files based on that sorted information.
 Sources:
 	Source 1: I learned how to use Scanner to read file @ https://www.w3schools.com/java/java_files_read.asp.
 	Source 2: I learned how to trim the space in the text file @ https://www.w3schools.com/java/ref_string_trim.asp.

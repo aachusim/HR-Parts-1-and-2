@@ -1,8 +1,8 @@
 /*
 Andrew Achusim
-02/24/25
+03/10/25
 Purpose: Create a program that reads and organize information that is stored in hr.txt. For Person.java,
-a person's name, height, and weight will be stroed and returns the data in a database-ready String format.
+a person's name, height, and weight will be stored and returns the data in a database-ready String format.
 Sources:
 	Source 1: I reviewed encapsulation @ https://www.w3schools.com/java/java_encapsulation.asp.
     Source 2: I reviewed how to override methods @ https://www.geeksforgeeks.org/overriding-in-java/.
