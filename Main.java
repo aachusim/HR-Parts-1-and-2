@@ -9,6 +9,7 @@ Sources:
 	Source 3: I learend how to covert string numbers into doubles @ https://www.geeksforgeeks.org/double-parsedouble-method-in-java-with-examples/.
 	Source 4: I learned about FileNotFoundException @ https://www.geeksforgeeks.org/java-io-filenotfoundexception-in-java/.
 	Source 5: I learend about Class Patterns to get the split method to work for "hr.txt" @ https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html.
+	Source 6: I learend how to use FileWriter @ https://www.geeksforgeeks.org/filewriter-class-in-java/.
 This code is provided to give you a
 starting place. It should be modified.
 No further imports are needed.
@@ -50,11 +51,16 @@ public class Main
 	public static void main(String[] args) 
 	{
 		// A Person test object with made up data.
-		Person person = new Person("Mario", 10.0, 10.0);
+		//Person person = new Person("Mario", 10.0, 10.0);
 		// A line that proves the tests worked.
-		System.out.println("Test Entry: " + person);
+		//System.out.println("Test Entry: " + person);
 		// A PersonSet test object
-		PersonSet personSet = new PersonSet();
+		//PersonSet personSet = new PersonSet();
+		
+		// A PersonOrderedSet object
+		PersonOrderedSet orderedSet = new PersonOrderedSet();
+		// A PersonImerialSet object
+		PersonImperialSet imperialSet = new PersonImperialSet();
 		
 		// Don't overcomplicate the data
 		// reading. After skipping the
@@ -99,7 +105,11 @@ public class Main
 					// A new Person object that puts all the values of the previous variabes into the Person constructor.
 					Person entry = new Person(name, height, weight);
 					// A PersonSet object calling the add method to add the entry object into itself.
-					personSet.add(entry);
+					//personSet.add(entry);
+					// A PersonOrderedSet object calling the add method to add the entry into itself.
+					orderedSet.add(entry);
+					// A PersonImperiaalSet object calling the add method to add the entry into itself.
+					imperialSet.add(entry);
 
 					// Testing to see if each new entry was added to personSet.
 					//System.out.println("Added: " + entry);
@@ -107,11 +117,16 @@ public class Main
 			}
 			// Closes the open scanner object.
 			fileReader.close();
-			/*
-			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
-			fileWriterOrder.write("testing");
-			fileWriterOrder.close();
-			*/
+			
+			FileWriter orderedWriter = new FileWriter("hr_ordered.txt");
+			orderedWriter.write("Name\tHeight (cm)\tWeight (kg)\n");
+			orderedWriter.write(orderedSet.toString());
+			orderedWriter.close();
+
+			FileWriter imperialWriter = new FileWriter("hr_imperial.txt");
+			imperialWriter.write("Name\tHeight (in)\tWeight (lbs)\n");
+			imperialWriter.write(imperialSet.toString());
+			imperialWriter.close();
 		}
 		// What is executed when an exception is found.
 		catch(Exception e)
@@ -121,7 +136,12 @@ public class Main
 			System.exit(1);
 		}
 
-		// Prints out all the data in the PersonSet object.
-		System.out.println(personSet.toString());
+		// Prints out all the data in the PersonOrderedSet object.
+		System.out.println("Ordered Data Set");
+		System.out.println(orderedSet.toString());
+		//Prints out all the data in the PersonImperialSet object.
+		System.out.println("Imperial Data Set");
+		System.out.println(imperialSet.toString());
+
 	}
 }
