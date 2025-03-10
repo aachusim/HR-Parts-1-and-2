@@ -1,8 +1,13 @@
 /*
 Andrew Achusim
+<<<<<<< HEAD
 03/10/25
 Purpose: Create a program that reads and organize information that is stored in hr.txt. For PersonSet.java,
 the classes createing in PersonList are implemented here and are called upon by Main.java.
+=======
+02/24/25
+Purpose: Create a program that reads and organize information that is stored in hr.txt.
+>>>>>>> 30da546ff4880359e847e568d1402580677b3d38
 Sources:
 	Source 1: I learned about interface @ https://www.w3schools.com/java/java_interface.asp.
     Source 2: I reviewed how to override methods @ https://www.geeksforgeeks.org/overriding-in-java/.
